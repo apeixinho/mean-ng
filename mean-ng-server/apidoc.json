@@ -1,0 +1,8 @@
+{
+    "name": "MEAN-NG",
+    "version": "1.0.0",
+    "description": "MEAN NG Server API guide",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

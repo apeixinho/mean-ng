@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<div class="container padded">
+  <div *ngIf="isLoggedIn; else loginneeded">
+    <h1>Welcome back!</h1>
+  </div>
+  <ng-template #loginneeded>
+    <h1>Hello There!</h1>
+    <h2>Please register or login.</h2>
+  </ng-template>
+</div>
+<app-footer></app-footer>

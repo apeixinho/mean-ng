@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Register
+      <span><a routerLink="/auth/login" class="alert-link">Login</a></span>
+    </h3>
+  </div>
+  <div class="well" style="margin:0">
+    <app-form-error [message]="errorMessage"></app-form-error>
+    <form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <fieldset>
+        <div class="form-group" [class.has-error]="!valid(registerForm.get('inputFullName'))">
+          <label for="fullName" class="col-lg-2 control-label">Full Name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" placeholder="Your full name" id="inputFullName" formControlName="inputFullName">
+            <app-form-message [control]="registerForm.get('inputFullName')"></app-form-message>
+          </div>
+        </div>
+        <div class="form-group" [class.has-error]="!valid(registerForm.get('inputEmail'))">
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" placeholder="Email" id="inputEmail" formControlName="inputEmail">
+            <app-form-message [control]="registerForm.get('inputEmail')"></app-form-message>
+          </div>
+        </div>
+
+        <div class="form-group" [class.has-error]="!valid(registerForm.get('inputPassword'))">
+          <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" placeholder="Password" id="inputPassword" formControlName="inputPassword">
+            <app-form-message [control]="registerForm.get('inputPassword')"></app-form-message>
+          </div>
+        </div>
+        <div class="form-group" [class.has-error]="!valid(registerForm.get('inputPassword2'))">
+          <label for="inputVerifyPassword" class="col-lg-2 control-label">Verify Password</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" placeholder="Password verify" id="inputPassword2" formControlName="inputPassword2">
+            <app-form-message [control]="registerForm.get('inputPassword2')"></app-form-message>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid">Register</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
