@@ -3,6 +3,8 @@ This project expands on my [MEAN-NG Phase 0](https://github.com/nukegold/mean-ng
 
 To maintain a generic scaffold this project provides only a very basic website placeholder and a full authentication scheme: email/password, LinkedIn, and Facebook (others can be added using Passport strategies).
 
+![Screenshot](https://pbs.twimg.com/media/DJB2O7QW0AAEX6T.jpg:large)
+
 ## Key features:
 * Server and client can run from separate domains using CORS
 * Client can also run from a `dist` folder in the server
